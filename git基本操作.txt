@@ -1,8 +1,5 @@
 Git 基本操作
 
-1. 本地库初始化
-   创建仓库目录，进入目录后执行“git init” 
-
 2. 设置签名
    设置“用户名”和“Email”
    签名的分类：
@@ -19,20 +16,6 @@ Git 基本操作
 	    git remote add REPO_NAME https://github.com/<your_username>/xxxx.git
 
 [作业管理]
-4. 添加作业到暂存区（告诉 Git 程序您关心的文件并且将它此刻的变更记录下来）
-     git add FILE_NAME
-
-5. 从暂存区撤回作业
-     git rm --cached FILE_NAME
-
-6. 从暂存区提交至仓库 
-   git commit FILE_NAME 
-
-7. 修改后再次提交至stage 
-   git add FILE_NAME
-
-8. 再次提交
-   git commit -m "COMMENTS" FILE_NAME
 
 9. 查看作业提交日志
    git log   最完整日志形式
@@ -50,10 +33,3 @@ Git 基本操作
    3）使用‘~’符号后退
       git reset --hard HEAD~3   回到之前3个版本
 
-
-
-
-
-
-用 Git 来下载程序的安装源码
-git clone https://github.com/xxxx/yyy.git
