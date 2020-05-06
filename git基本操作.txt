@@ -1,0 +1,59 @@
+Git 基本操作
+
+1. 本地库初始化
+   创建仓库目录，进入目录后执行“git init” 
+
+2. 设置签名
+   设置“用户名”和“Email”
+   签名的分类：
+       1)仓库（项目）级别：当前项目库有效
+          (配置信息保存至.git/config文件)
+          git config user.name jalo
+          git config user.email jalowang@gmail.com
+       2)系统用户级别：登录当前操作系统的用户
+          git config --global user.name USER_NAME
+          git config --global user.email xxxx@xxx.com
+3. 查看仓库状态
+     在仓库目录下，执行“git status”命令
+4. 添加一个远程仓库并命名为  REPO_NAME
+	    git remote add REPO_NAME https://github.com/<your_username>/xxxx.git
+
+[作业管理]
+4. 添加作业到暂存区（告诉 Git 程序您关心的文件并且将它此刻的变更记录下来）
+     git add FILE_NAME
+
+5. 从暂存区撤回作业
+     git rm --cached FILE_NAME
+
+6. 从暂存区提交至仓库 
+   git commit FILE_NAME 
+
+7. 修改后再次提交至stage 
+   git add FILE_NAME
+
+8. 再次提交
+   git commit -m "COMMENTS" FILE_NAME
+
+9. 查看作业提交日志
+   git log   最完整日志形式
+   git log --pretty=oneline   单行显示
+   git log --oneline          单行显示（简单模式,只显示当前HEAD以及之前的版本）
+   git reflog                 单行显示（简单模式,显示所有历史版本）
+
+10.版本的前进后退
+   1）基于索引【推荐】
+      git reflog                查看历史提交记录以及索引
+      git reset --hard 3803ba7  按索引修改HEAD指向
+   2）使用‘^’符号后退
+      git reset --hard HEAD^    回到之前1个版本
+      git reset --hard HEAD^^   回到之前2个版本
+   3）使用‘~’符号后退
+      git reset --hard HEAD~3   回到之前3个版本
+
+
+
+
+
+
+用 Git 来下载程序的安装源码
+git clone https://github.com/xxxx/yyy.git
